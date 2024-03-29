@@ -1,0 +1,31 @@
+{% extends "quote.html" %}
+
+
+
+{% block quote %}
+<table class = "table blur">
+    <thead>
+        <tr>
+            <th scope="col"> Symbol</th> 
+            <th scope="col"> Name</th> 
+            <!-- <th scope="col"> Shares</td>
+            <th scope="col"> Price</th>
+            <th scope="col"> TOTAL</th> -->
+          
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for stock in stocks %}
+        <tr style="color: white;"> 
+          <td> <a href="/info, id = {{stock['id']}}"  >  {{ stock["ticker"] }}</a> </td>
+            <td> {{ stock["name"] }}</td>
+          
+           
+        </tr>
+        {% endfor %}
+
+    </tbody>
+   
+{% endblock %}
